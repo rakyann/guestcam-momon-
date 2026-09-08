@@ -1,7 +1,7 @@
 // LocalStorage & Dynamic Event Routing State Management
 
 // Bump this version to auto-clear all localStorage photo caches on next visit
-const CACHE_VERSION = 'v5-reset-20260814-empty';
+const CACHE_VERSION = 'v6-reset-alfiano-monita-cream';
 
 function checkAndClearOldCache() {
   const stored = localStorage.getItem('tuaipandang_cache_version');
@@ -21,37 +21,37 @@ export function getEventFromUrl() {
   const path = window.location.pathname;
   const parts = path.split('/').filter(Boolean);
 
-  let slug = "riztiana-rizky";
+  let slug = "alfiano-monita";
   if (parts.length >= 2 && (parts[0] === 'e' || parts[0] === 'events')) {
     slug = parts[1];
   } else if (parts.length === 1 && parts[0] !== '') {
     slug = parts[0];
   }
 
-  let formattedTitle = "Riztiana & Rizky's Wedding Day";
-  let hostName = "Riztiana & Rizky";
+  let formattedTitle = "Alfiano & Monita's Wedding Day";
+  let hostName = "Alfiano & Monita";
 
   return {
     id: slug,
     title: formattedTitle,
     subtitle: `Lihat & abadikan momen spontan di ${formattedTitle} dengan tuaipandang, kamera sekali pakai digital.`,
-    date: "15 Agustus 2026",
+    date: "13 September 2026",
     location: "",
     coverImage: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80",
     maxShotsPerGuest: 3,
     hostName: hostName,
-    frameText: `${formattedTitle} • 15.08.2026`,
+    frameText: `${formattedTitle} • 13.09.2026`,
     groom: {
-      nickname: "Rizky",
-      fullname: "Rizky",
+      nickname: "Alfiano",
+      fullname: "Alfiano",
       father: "-",
       mother: "-",
       address: "-",
-      instagram: "@rizky"
+      instagram: "@alfiano"
     },
     bride: {
-      nickname: "Riztiana",
-      fullname: "Riztiana",
+      nickname: "Monita",
+      fullname: "Monita",
       father: "-",
       mother: "-",
       address: "-"

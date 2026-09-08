@@ -13,26 +13,26 @@
     letter-spacing: 0.25em;
   }
 
-  /* Editorial Layout Container - Luxury Black Theme */
+  /* Editorial Layout Container - Warm Luxury Cream Theme */
   .editorial-container {
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
-    background-color: #0a0a0a;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
+    background-color: #faf6f0;
+    box-shadow: 0 25px 50px -12px rgba(44, 37, 35, 0.18);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    border-left: 1px solid #27272a;
-    border-right: 1px solid #27272a;
-    color: #f4f4f5;
+    border-left: 1px solid #e5dcd0;
+    border-right: 1px solid #e5dcd0;
+    color: #2c2523;
   }
 
   /* Vertical Editorial Divider Line */
   .editorial-line-v {
     width: 1px;
     height: 48px;
-    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.2), transparent);
+    background: linear-gradient(to bottom, transparent, rgba(66, 52, 43, 0.25), transparent);
     margin: 1.5rem auto;
   }
 
@@ -44,9 +44,9 @@
     gap: 0.5rem;
     padding: 0.75rem 1.75rem;
     border-radius: 9999px;
-    border: 1px solid #3f3f46;
-    background-color: #18181b;
-    color: #f4f4f5;
+    border: 1px solid #d8cebe;
+    background-color: #efe7dc;
+    color: #2c2523;
     font-size: 0.65rem;
     text-transform: uppercase;
     letter-spacing: 0.25em;
@@ -56,17 +56,17 @@
   }
 
   .btn-editorial-pill:hover {
-    background-color: #ffffff;
-    color: #09090b;
-    border-color: #ffffff;
-    box-shadow: 0 10px 25px -5px rgba(255, 255, 255, 0.15);
+    background-color: #2c2523;
+    color: #faf6f0;
+    border-color: #2c2523;
+    box-shadow: 0 10px 25px -5px rgba(44, 37, 35, 0.25);
   }
 
   /* Modal Backdrop Editorial */
   .modal-backdrop-editorial {
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(30, 24, 22, 0.75);
     backdrop-filter: blur(12px);
     display: flex;
     align-items: center;
@@ -77,8 +77,8 @@
 }
 
 body {
-  background-color: #050505;
-  color: #f4f4f5;
+  background-color: #ede5d8;
+  color: #2c2523;
 }
 
 /* Screen Flash Burst Effect */
@@ -100,20 +100,20 @@ body {
 .marquee-bar {
   overflow: hidden;
   white-space: nowrap;
-  border-bottom: 1px solid #27272a;
+  border-bottom: 1px solid #e5dcd0;
   padding: 0.5rem 0;
   font-size: 0.65rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: #a1a1aa;
+  color: #786c65;
   font-family: monospace;
 }
 
 /* LED Shutter Roll Counter Screen */
 .led-counter-screen {
   font-family: 'Share Tech Mono', monospace;
-  color: #ff3b30;
-  text-shadow: 0 0 8px rgba(255, 59, 48, 0.7);
+  color: #c93b2b;
+  text-shadow: 0 0 8px rgba(201, 59, 43, 0.4);
   letter-spacing: 0.1em;
 }
 
@@ -124,14 +124,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #09090b;
+  background: #ede5d8;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #d8cebe;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #b8a898;
 }

@@ -58,7 +58,7 @@ export default async function handler(req, res) {
     });
 
     const file = Array.isArray(files.file) ? files.file[0] : files.file;
-    const eventId = Array.isArray(fields.eventId) ? fields.eventId[0] : (fields.eventId || 'riztiana-rizky');
+    const eventId = Array.isArray(fields.eventId) ? fields.eventId[0] : (fields.eventId || 'alfiano-monita');
     const guestSessionId = Array.isArray(fields.guestSessionId) ? fields.guestSessionId[0] : (fields.guestSessionId || 'Tamu Acara');
     const caption = Array.isArray(fields.caption) ? fields.caption[0] : (fields.caption || '');
 

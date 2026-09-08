@@ -31,7 +31,7 @@ export default async function handler(req, res) {
     res.end(JSON.stringify(data));
   };
 
-  const eventId = (req.query && req.query.eventId) || 'riztiana-rizky';
+  const eventId = (req.query && req.query.eventId) || 'alfiano-monita';
 
   if (req.method === 'GET') {
     if (!global._tuaipandangPhotos[eventId]) {

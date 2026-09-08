@@ -26,14 +26,14 @@ export default function PhotoLightbox({ photo, onClose, onLikePhoto }) {
         // Share actual image file — works great on Android & iOS
         await navigator.share({
           files: [file],
-          title: `📸 Foto dari Pernikahan Riztiana & Rizky`,
-          text: `Momen spesial dari pernikahan Riztiana & Rizky – 15 Agustus 2026 💍\n\nLihat semua foto di: https://tuaipandang.vercel.app/e/riztiana-rizky`
+          title: `📸 Foto dari Pernikahan Alfiano & Monita`,
+          text: `Momen spesial dari pernikahan Alfiano & Monita – 13 September 2026 💍\n\nLihat semua foto di: https://tuaipandang.vercel.app/e/alfiano-monita`
         });
       } else if (navigator.share) {
         // Share via URL only (fallback)
         await navigator.share({
-          title: `📸 Foto dari Pernikahan Riztiana & Rizky`,
-          text: `Momen spesial dari pernikahan Riztiana & Rizky – 15 Agustus 2026 💍`,
+          title: `📸 Foto dari Pernikahan Alfiano & Monita`,
+          text: `Momen spesial dari pernikahan Alfiano & Monita – 13 September 2026 💍`,
           url: photo.imageUrl
         });
       } else {

@@ -201,12 +201,12 @@ export default function DisposableCameraModal({ isOpen, onClose, remainingRolls,
       {/* Bright Screen Flash Overlay */}
       {isFlashing && <div className="screen-flash-overlay" />}
 
-      <div className="relative w-full max-w-md bg-[#0a0a0a] border border-white/20 rounded-2xl overflow-hidden shadow-2xl flex flex-col max-h-[92vh] animate-scale-up">
+      <div className="relative w-full max-w-md bg-[#faf6f0] border border-[#e5dcd0] rounded-2xl overflow-hidden shadow-2xl flex flex-col max-h-[92vh] animate-scale-up text-[#2c2523]">
         {/* Camera Header Bar */}
-        <div className="px-5 py-3.5 bg-[#121212] border-b border-white/10 flex items-center justify-between z-10">
+        <div className="px-5 py-3.5 bg-[#efe7dc] border-b border-[#e5dcd0] flex items-center justify-between z-10">
           <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1.5 bg-black px-3 py-1 rounded-full border border-red-500/40">
-              <span className="text-[9px] text-red-500 font-mono tracking-widest uppercase">ROLL:</span>
+            <div className="flex items-center gap-1.5 bg-[#2c2523] px-3 py-1 rounded-full border border-red-500/40">
+              <span className="text-[9px] text-red-400 font-mono tracking-widest uppercase">ROLL:</span>
               <span className="led-counter-screen text-xs">
                 {String(remainingRolls).padStart(2, '0')} / {event.maxShotsPerGuest}
               </span>
@@ -215,18 +215,18 @@ export default function DisposableCameraModal({ isOpen, onClose, remainingRolls,
 
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-full border border-white/20 bg-white/5 hover:bg-white hover:text-black flex items-center justify-center text-white transition-all"
+            className="w-8 h-8 rounded-full border border-[#d8cebe] bg-[#faf6f0] hover:bg-[#2c2523] hover:text-[#faf6f0] flex items-center justify-center text-[#2c2523] transition-all cursor-pointer shadow-sm"
           >
             <X className="w-4 h-4" />
           </button>
         </div>
 
         {/* Viewfinder Window */}
-        <div className="relative w-full aspect-square bg-black overflow-hidden flex items-center justify-center">
+        <div className="relative w-full aspect-square bg-[#1c1917] overflow-hidden flex items-center justify-center">
           {cameraError ? (
             <div className="p-6 text-center flex flex-col items-center gap-3">
-              <AlertCircle className="w-8 h-8 text-stone-400" />
-              <p className="text-xs text-stone-300 max-w-xs">{cameraError}</p>
+              <AlertCircle className="w-8 h-8 text-stone-300" />
+              <p className="text-xs text-stone-200 max-w-xs">{cameraError}</p>
               <button
                 onClick={() => fileInputRef.current?.click()}
                 className="btn-editorial-pill py-2.5 px-5 text-[10px] mt-2"
@@ -268,24 +268,24 @@ export default function DisposableCameraModal({ isOpen, onClose, remainingRolls,
 
           {/* Optional Frame Preview Badge if enabled */}
           {showFrame && (
-            <div className="absolute bottom-3 left-3 right-3 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 flex justify-between items-center text-[10px] text-stone-300 z-10">
+            <div className="absolute bottom-3 left-3 right-3 bg-[#2c2523]/85 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 flex justify-between items-center text-[10px] text-stone-200 z-10">
               <span className="font-semibold truncate">{event.frameText}</span>
-              <span className="font-mono text-[8px] uppercase tracking-widest text-stone-400">TUAIPANDANG FRAME</span>
+              <span className="font-mono text-[8px] uppercase tracking-widest text-amber-200">TUAIPANDANG FRAME</span>
             </div>
           )}
         </div>
 
         {/* Preset Film Bar */}
-        <div className="p-4 bg-[#121212] border-t border-white/10">
+        <div className="p-4 bg-[#efe7dc] border-t border-[#e5dcd0]">
           <div className="flex items-center justify-between mb-2.5">
-            <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-300 flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-stone-400" />
+            <span className="text-[10px] uppercase tracking-wider font-semibold text-[#2c2523] flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-[#786c65]" />
               Preset Film Analog:
             </span>
             <button
               onClick={() => setShowFrame(!showFrame)}
-              className={`text-[9px] uppercase tracking-widest px-3 py-1 rounded-full border transition-all ${
-                showFrame ? 'bg-white text-black border-white font-bold' : 'bg-white/5 text-stone-400 border-white/20'
+              className={`text-[9px] uppercase tracking-widest px-3 py-1 rounded-full border transition-all cursor-pointer ${
+                showFrame ? 'bg-[#2c2523] text-[#faf6f0] border-[#2c2523] font-bold shadow-sm' : 'bg-[#faf6f0] text-[#786c65] border-[#d8cebe]'
               }`}
             >
               Watermark Frame: {showFrame ? 'ON' : 'OFF (Clean)'}
@@ -298,10 +298,10 @@ export default function DisposableCameraModal({ isOpen, onClose, remainingRolls,
               <button
                 key={preset.id}
                 onClick={() => setSelectedPreset(preset.id)}
-                className={`px-3.5 py-1.5 rounded-full text-[10px] uppercase tracking-wider font-semibold whitespace-nowrap transition-all border ${
+                className={`px-3.5 py-1.5 rounded-full text-[10px] uppercase tracking-wider font-semibold whitespace-nowrap transition-all border cursor-pointer ${
                   selectedPreset === preset.id
-                    ? 'bg-white text-black border-white font-bold shadow-md'
-                    : 'bg-white/5 text-stone-300 border-white/20 hover:border-white/50 hover:text-white'
+                    ? 'bg-[#2c2523] text-[#faf6f0] border-[#2c2523] font-bold shadow-md'
+                    : 'bg-[#faf6f0] text-[#594d46] border-[#d8cebe] hover:border-[#2c2523] hover:text-[#2c2523]'
                 }`}
               >
                 {preset.name}
@@ -311,12 +311,12 @@ export default function DisposableCameraModal({ isOpen, onClose, remainingRolls,
         </div>
 
         {/* Camera Shutter Bar */}
-        <div className="p-5 bg-[#0a0a0a] flex items-center justify-around z-10">
+        <div className="p-5 bg-[#faf6f0] border-t border-[#e5dcd0] flex items-center justify-around z-10">
           {/* Flash Toggle */}
           <button
             onClick={() => setFlashMode(!flashMode)}
-            className={`w-11 h-11 rounded-full border flex items-center justify-center transition-all ${
-              flashMode ? 'bg-white text-black border-white' : 'border-white/30 text-stone-300 hover:bg-white/10'
+            className={`w-11 h-11 rounded-full border flex items-center justify-center transition-all cursor-pointer shadow-sm ${
+              flashMode ? 'bg-[#2c2523] text-[#faf6f0] border-[#2c2523]' : 'border-[#d8cebe] bg-[#efe7dc] text-[#2c2523] hover:bg-[#2c2523] hover:text-[#faf6f0]'
             }`}
             title="Toggle Flash"
           >
@@ -327,18 +327,18 @@ export default function DisposableCameraModal({ isOpen, onClose, remainingRolls,
           <button
             onClick={handleCapture}
             disabled={remainingRolls <= 0 || isProcessing}
-            className="w-18 h-18 rounded-full border-2 border-white p-1 shadow-2xl active:scale-95 transition-transform flex items-center justify-center disabled:opacity-40"
+            className="w-18 h-18 rounded-full border-2 border-[#2c2523] p-1 shadow-xl active:scale-95 transition-transform flex items-center justify-center disabled:opacity-40 cursor-pointer bg-[#2c2523]"
             title="Ambil Foto"
           >
-            <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-              <Camera className="w-7 h-7 text-black" />
+            <div className="w-full h-full rounded-full bg-[#faf6f0] hover:bg-[#ffffff] flex items-center justify-center transition-colors">
+              <Camera className="w-7 h-7 text-[#2c2523]" />
             </div>
           </button>
 
           {/* Switch Camera */}
           <button
             onClick={handleSwitchCamera}
-            className="w-11 h-11 rounded-full border border-white/30 text-stone-300 flex items-center justify-center hover:bg-white/10 transition-colors"
+            className="w-11 h-11 rounded-full border border-[#d8cebe] bg-[#efe7dc] text-[#2c2523] flex items-center justify-center hover:bg-[#2c2523] hover:text-[#faf6f0] transition-colors cursor-pointer shadow-sm"
             title="Ganti Kamera"
           >
             <RefreshCw className="w-5 h-5" />
