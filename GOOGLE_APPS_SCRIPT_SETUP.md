@@ -73,7 +73,7 @@ function doGet(e) {
       
       photos.push({
         id: 'photo_drive_' + file.getId(),
-        eventId: 'riztiana-rizky',
+        eventId: 'alfiano-monita',
         guestName: guestName,
         wish: wish,
         imageUrl: "https://lh3.googleusercontent.com/d/" + file.getId(),
