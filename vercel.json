@@ -1,0 +1,10 @@
+{
+  "alias": [
+    "tuaipandang.vercel.app",
+    "album-riztiana-rizky.vercel.app"
+  ],
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

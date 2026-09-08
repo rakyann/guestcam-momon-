@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-calligraphy {
+    font-family: 'Pinyon Script', 'Alex Brush', cursive;
+  }
+
+  .font-editorial {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .tracking-editorial {
+    letter-spacing: 0.25em;
+  }
+
+  /* Editorial Layout Container - Luxury Black Theme */
+  .editorial-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #0a0a0a;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #27272a;
+    border-right: 1px solid #27272a;
+    color: #f4f4f5;
+  }
+
+  /* Vertical Editorial Divider Line */
+  .editorial-line-v {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.2), transparent);
+    margin: 1.5rem auto;
+  }
+
+  /* Minimalist Editorial Outline Pill Button */
+  .btn-editorial-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    border-radius: 9999px;
+    border: 1px solid #3f3f46;
+    background-color: #18181b;
+    color: #f4f4f5;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn-editorial-pill:hover {
+    background-color: #ffffff;
+    color: #09090b;
+    border-color: #ffffff;
+    box-shadow: 0 10px 25px -5px rgba(255, 255, 255, 0.15);
+  }
+
+  /* Modal Backdrop Editorial */
+  .modal-backdrop-editorial {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 50;
+  }
+}
+
+body {
+  background-color: #050505;
+  color: #f4f4f5;
+}
+
+/* Screen Flash Burst Effect */
+.screen-flash-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #ffffff;
+  z-index: 9999;
+  pointer-events: none;
+  animation: flash-burst 0.4s ease-out forwards;
+}
+
+@keyframes flash-burst {
+  0% { opacity: 0.98; }
+  100% { opacity: 0; }
+}
+
+/* Ticker Bar Animation */
+.marquee-bar {
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 1px solid #27272a;
+  padding: 0.5rem 0;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #a1a1aa;
+  font-family: monospace;
+}
+
+/* LED Shutter Roll Counter Screen */
+.led-counter-screen {
+  font-family: 'Share Tech Mono', monospace;
+  color: #ff3b30;
+  text-shadow: 0 0 8px rgba(255, 59, 48, 0.7);
+  letter-spacing: 0.1em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
